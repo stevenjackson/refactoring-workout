@@ -6,9 +6,9 @@ class Checkerboard
 
   def to_s
     rows = Array.new(size) { Array.new(size) }
-    rows.each_with_index do |row, y|
-      row.size.times do |x|
-        row[x] = Cell.new(x, y)
+    size.times do |y|
+      size.times do |x|
+        rows[y][x] = Cell.new(x, y)
       end
     end
     rows.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
