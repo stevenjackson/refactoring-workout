@@ -13,12 +13,10 @@ class Checkerboard
 
   def row y
     row = []
-    if y == 0
-      row << pos(0, y)
-      row << pos(1, y)
-    else
-      row = ["W", "B"]
+    size.times do |x|
+      row << pos(x, y)
     end
+    row
   end
 
   def pos x, y
