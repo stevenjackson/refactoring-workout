@@ -27,11 +27,7 @@ class Checkerboard
     end
 
     def to_s
-      if (x + y).even?
-        "B"
-      else
-        "W"
-      end
+      (x + y).even? ? "B" : "W"
     end
 
   end
