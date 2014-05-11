@@ -18,4 +18,8 @@ class Checkerboard
       ["W", "B"]
     end
   end
+
+  def pos x, y
+    x == y ? "B" : "W"
+  end
 end
