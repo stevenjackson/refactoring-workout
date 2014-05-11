@@ -8,4 +8,8 @@ class Checkerboard
     rows << "W B"
     rows.map{ |row| "#{row}\n" }.join
   end
+
+  def present_row args
+    args.join ' '
+  end
 end
