@@ -14,7 +14,8 @@ class Checkerboard
   def row y
     row = []
     if y == 1
-      row = ["B", "W"]
+      row << pos(1, y)
+      row << pos(2, y)
     else
       row = ["W", "B"]
     end
