@@ -15,7 +15,7 @@ class Checkerboard
   def row y
     row = []
     size.times do |x|
-      row << Cell.new(x, y).to_s
+      row << Cell.new(x, y)
     end
     row
   end
