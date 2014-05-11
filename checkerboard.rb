@@ -10,4 +10,12 @@ class Checkerboard
     rows << ["W",  "B"]
     rows.map{ |row| row.join(' ') + "\n" }.join
   end
+
+  def row y
+    if y == 1
+      ["B", "W"]
+    else
+      ["W", "B"]
+    end
+  end
 end
