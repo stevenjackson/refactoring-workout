@@ -6,8 +6,8 @@ class Checkerboard
 
   def to_s
     rows = []
-    rows << ["B", "W"]
-    rows << ["W",  "B"]
+    rows << row(1)
+    rows << row(2)
     rows.map{ |row| row.join(' ') + "\n" }.join
   end
 
