@@ -12,10 +12,11 @@ class Checkerboard
   end
 
   def row y
+    row = []
     if y == 1
-      ["B", "W"]
+      row = ["B", "W"]
     else
-      ["W", "B"]
+      row = ["W", "B"]
     end
   end
 
