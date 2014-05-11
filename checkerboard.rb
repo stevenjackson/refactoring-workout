@@ -14,12 +14,12 @@ class Checkerboard
   def row y
     row = []
     size.times do |x|
-      row << (x == y ? "B" : "W")
+      if (x + y).even?
+        row << "B"
+      else
+        row << "W"
+      end
     end
     row
-  end
-
-  def pos x, y
-    
   end
 end
