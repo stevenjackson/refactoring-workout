@@ -7,17 +7,11 @@ class Checkerboard
   def to_s
     rows = []
     size.times do |y|
-      rows << row(y)
+      row = []
+      size.times { |x| row << Cell.new(x, y) }
+      rows << row
     end
     rows.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
-  end
-
-  def row y
-    row = []
-    size.times do |x|
-      row << Cell.new(x, y)
-    end
-    row
   end
 
   class Cell
