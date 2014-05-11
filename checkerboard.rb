@@ -1,14 +1,15 @@
 class Checkerboard
-  attr_reader :size
+  attr_reader :size, :board
   def initialize(size)
     @size = size
+    @board = build
   end
 
   def to_s
     board.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
   end
 
-  def board
+  def build
     board = Array.new(size) { Array.new(size) }
     size.times do |y|
       size.times do |x|
