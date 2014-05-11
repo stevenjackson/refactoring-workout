@@ -5,13 +5,17 @@ class Checkerboard
   end
 
   def to_s
-    rows = Array.new(size) { Array.new(size) }
+    board.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
+  end
+
+  def board
+    board = Array.new(size) { Array.new(size) }
     size.times do |y|
       size.times do |x|
-        rows[y][x] = Cell.new(x, y)
+        board[y][x] = Cell.new(x, y)
       end
     end
-    rows.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
+    board
   end
 
   class Cell
