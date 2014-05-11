@@ -6,6 +6,6 @@ class Checkerboard
     rows = []
     rows << ["B", "W"]
     rows << ["W",  "B"]
-    rows.map{ |row| row.join ' ' }.map{ |row| "#{row}\n" }.join
+    rows.map{ |row| row.join(' ') + "\n" }.join
   end
 end
