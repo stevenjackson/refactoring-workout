@@ -9,7 +9,7 @@ class Checkerboard
     size.times do |y|
       rows << row(y)
     end
-    rows.map{ |row| row.join(' ') + "\n" }.join
+    rows.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
   end
 
   def row y
@@ -29,6 +29,5 @@ class Checkerboard
     def to_s
       (x + y).even? ? "B" : "W"
     end
-
   end
 end
