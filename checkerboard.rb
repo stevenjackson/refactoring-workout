@@ -13,12 +13,8 @@ class Checkerboard
 
   def row y
     row = []
-    if y == 1
-      row << pos(1, y)
-      row << pos(2, y)
-    else
-      row = ["W", "B"]
-    end
+    row << pos(1, y)
+    row << pos(2, y)
   end
 
   def pos x, y
