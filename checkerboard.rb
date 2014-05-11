@@ -15,11 +15,7 @@ class Checkerboard
   def row y
     row = []
     size.times do |x|
-      if (x + y).even?
-        row << "B"
-      else
-        row << "W"
-      end
+      row << Cell.new(x, y).to_s
     end
     row
   end
@@ -27,8 +23,16 @@ class Checkerboard
   class Cell
     attr_reader :x, :y
     def initialize(x, y)
+      @x = x; @y = y
     end
 
+    def to_s
+      if (x + y).even?
+        "B"
+      else
+        "W"
+      end
+    end
 
   end
 end
