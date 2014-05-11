@@ -5,11 +5,11 @@ class Checkerboard
   end
 
   def to_s
-    rows = []
-    size.times do |y|
-      row = []
-      size.times { |x| row << Cell.new(x, y) }
-      rows << row
+    rows = Array.new(size) { Array.new(size) }
+    rows.each_with_index do |row, y|
+      row.size.times do |x|
+        row[x] = Cell.new(x, y)
+      end
     end
     rows.map{ |row| row.map(&:to_s).join(' ') + "\n" }.join
   end
