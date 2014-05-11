@@ -1,5 +1,7 @@
 class Checkerboard
-  def initialize(_)
+  attr_reader :size
+  def initialize(size)
+    @size = size
   end
 
   def to_s
